@@ -39,7 +39,7 @@ const Contact = () => {
               </p>
               <p className="flex items-center gap-2">
                 <MdEmail className="text-lg" />
-                <span>Email: officialcleedenz@gmail.com</span>
+                <span>Email: support@protecturabase.com</span>
               </p>
             </div>
           </div>
