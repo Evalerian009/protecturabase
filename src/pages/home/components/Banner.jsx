@@ -13,7 +13,7 @@ const Banner = () => {
           Have a special request, inquiry, or need expert consultation? Click the link below to get in touch.  
           For immediate assistance, use our live support option to connect with an agent in real time.
         </p>
-        <Button color="blue" title="Contact Us" href="contact" custStyles="block w-fit mx-auto mt-8" />
+        <Button color="blue" title="Learn More" href="services" custStyles="block w-fit mx-auto mt-8" />
       </div>
     </div>
   );
