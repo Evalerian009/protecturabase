@@ -13,7 +13,7 @@ const ContactForm = () => {
   };
   return (
     <form
-      action="https://formsubmit.co/support@protecturabase.com" // Replace with your FormSubmit email
+      action="https://formsubmit.co/simonemmanuel203@gmail.com" // Replace with your FormSubmit email
       method="POST"
       className="w-full md:w-[48%] flex flex-col gap-4"
       onSubmit={handleSubmit}
