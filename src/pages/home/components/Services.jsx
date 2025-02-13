@@ -9,8 +9,8 @@ const Services = () => {
     <section className={`${styles.padX} ${styles.padY} py-14 md:py-[100px] lg:px-[100px]`}>
       {/* Section Heading */}
       <Heading
-        title="The Cleedenz Agency"
-        txt="At Cleedenz, we prioritize excellent customer support and offer specialized services in hacking recovery, data restoration, and cybersecurity solutions."
+        title="Protecturabase"
+        txt="We prioritize excellent customer support and offer specialized services in hacking recovery, data restoration, and cybersecurity solutions."
       />
 
       <div className="mt-18 flex flex-col items-center md:flex-row-reverse gap-7">

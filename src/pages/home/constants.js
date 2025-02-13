@@ -81,17 +81,17 @@ export const stats = [
 export const slides = [
   {
     id: 1,
-    text: "Cleedenz stands out for its unwavering commitment to excellence. Their solutions are both effective and meticulously executed, prioritizing client success above all.",
+    text: "Protecturabase stands out for its unwavering commitment to excellence. Their solutions are both effective and meticulously executed, prioritizing client success above all.",
     user: "Lucas",
   },
   {
     id: 2,
-    text: "I recently used Cleedenz's password recovery service and was impressed by their professionalism and efficiency. The process was seamless, and their expertise was evident from start to finish.",
+    text: "I recently used Protecturabase's password recovery service and was impressed by their professionalism and efficiency. The process was seamless, and their expertise was evident from start to finish.",
     user: "Grace",
   },
   {
     id: 3,
-    text: "I highly recommend Cleedenz to anyone seeking reliable cybersecurity solutions. Their dedication to client satisfaction is unmatched. Thank you for recovering my lost funds!",
+    text: "I highly recommend Protecturabase to anyone seeking reliable cybersecurity solutions. Their dedication to client satisfaction is unmatched. Thank you for recovering my lost funds!",
     user: "Emma & Family",
   },
 ];
