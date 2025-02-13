@@ -22,7 +22,7 @@ const ContactForm = () => {
       <input type="hidden" name="_captcha" value="false" />
 
       {/* Redirect after submission (optional) */}
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+      <input type="hidden" name="_next" value="https://protecturabase.vercel.app//thank-you" />
 
       {/* Input Fields */}
       <input
