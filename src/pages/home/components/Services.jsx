@@ -32,7 +32,7 @@ const Services = () => {
           </ul>
 
           {/* CTA Button */}
-          <Button title="Contact Us" href="contact" color="blue" custStyles="block w-fit mt-7" />
+          <Button title="Learn More" href="services" color="blue" custStyles="block w-fit mt-7" />
         </div>
       </div>
     </section>
