@@ -12,6 +12,7 @@ const ThankYou = () => {
       <Link
         to="/"
         className="mt-5 bg-button1 hover:bg-bgTet text-white py-3 px-6 rounded-lg text-[15px] uppercase duration-200"
+        onClick={() => {window.scrollTo(0, 0)}}
       >
         Go to Homepage
       </Link>

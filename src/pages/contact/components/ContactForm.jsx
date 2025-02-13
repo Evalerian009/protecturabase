@@ -58,6 +58,7 @@ const ContactForm = () => {
       <button
         type="submit"
         className="bg-button1 hover:bg-bgTet py-3 text-white text-[14px] uppercase rounded-lg transition-all"
+        onClick={() => {window.scrollTo(0, 0); }}
       >
         Submit
       </button>
