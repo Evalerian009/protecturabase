@@ -15,7 +15,7 @@ const Services = () => {
 
       <div className="mt-18 flex flex-col items-center md:flex-row-reverse gap-7">
         {/* Image Section */}
-        <div className="lg:w-1/2 w-full h-[300px] relative overflow-hidden rounded-lg">
+        <div className="lg:w-1/2 w-full h-[375px]  relative overflow-hidden">
           <img src="services.jpg" alt="Our Services" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#0000003d]" />
         </div>
