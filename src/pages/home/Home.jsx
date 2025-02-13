@@ -1,19 +1,19 @@
 import Hero from './components/Hero'
-import TrustBrands from '../../components/TrustBrands'
-import AboutUs from './components/AboutUs'
-import Cta from '../../components/Cta'
-import Support from './components/Support'
-import Faqs from '../../components/Faqs'
+import Offers from './components/Offers'
+import Services from './components/Services'
+import Banner from './components/Banner'
+import Stats from './components/Stats'
+import Reviews from '../../components/Reviews'
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <TrustBrands />
-      <AboutUs />
-      <Cta />
-      <Support />
-      <Faqs />
+      <Offers />
+      <Services />
+      <Banner />
+      <Stats />
+      <Reviews />
     </div>
   )
 }

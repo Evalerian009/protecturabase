@@ -1,19 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-    --color-blue: #4f46e4;
-    --color-gray: #e5e7eb;
-    --font-montserrat: 'Montserrat', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-bgPri:#F2F2F2 ;
+  --color-bgTet:#1E1E1E;
+  --color-mainTxt: #1E1E1E;
+  --color-grayTxt: #4D4D4D;
+  --color-lightTxt: #dadada;
+  --color-mutedTxt: #808080;
+  --color-button1: #455f6b;
+  --color-button2: #61C0E8;
+  --color-border: #D9D9D9;
+  --font-montserrat: 'Inter', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
 
-  }
+@font-face {
+  font-family: 'Inter';
+  src: url('/Inter.ttf');
+  color: #455f6b;
+}
 
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('/Montserrat.ttf');
-  }
-
-  .fade-enter {
-    opacity: 0;
+.fade-enter {
+  opacity: 0;
 }
 .fade-enter-active {
     opacity: 1;

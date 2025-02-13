@@ -1,31 +1,38 @@
-import Button from "../../../components/Button"
-import { styles } from "../../../constants/styles"
+import Button from "../../../components/Button";
+import { styles } from "../../../constants/styles";
 
 const Hero = () => {
   return (
-    <div className={`${styles.padX} ${styles.heroPadY} flex flex-col md:flex-row relative`}>
-        <div className="md:w-3/5 relative z-[]8">
-            <h1 className="text-[2.5rem] min-[400px]:text-[3rem] md:text-[3.25rem] lg:text-[3.5rem] xl:text-[4.5rem] relative z-[6]">Effortless, Transparent Wallet Restoration</h1>
-            <p className="mt-5 max-w-[480px] leading-relaxed relative z-[6]">
-            Regain control of your crypto assets with our secure, hassle-free recovery process. We guide you every step of the way, ensuring transparency and privacy. Trust our experts to restore your wallet quickly and safely.
-            <br />
-            <br />
-            Start your recovery today.</p>
+    <div
+      className="w-screen h-[700px] lg:min-h-screen text-white flex items-center"
+      style={{
+        backgroundImage: `url(hero-bg1.jpg)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Dark Overlay for Contrast */}
+      <div className={`bg-[#000000a7] w-full h-full ${styles.padX} ${styles.padY} flex flex-col justify-center`}>
+        <div className="md:max-w-[600px]">
+          {/* Main Heading */}
+          <h1 className="text-[2.6rem] md:text-6xl leading-tight font-semibold uppercase">
+            We Are an Innovative <br /> Creative Agency
+          </h1>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-                <Button color='gray' title='Testimonials' custStyles={''} href="testimonials" />
-                <Button color='blue' title='Contact Us' href="contact" />
-            </div>
-        </div>
+          {/* Supporting Text */}
+          <p className="mt-6 text-lightTxt md:w-[360px] lg:w-full">
+            Pushing the boundaries of design and technology, we craft solutions that elevate brands. Let’s build something exceptional together.
+          </p>
 
-        <div className="max-[720px]:max-w-[250px] mx-auto min-[720px]:w-3/5 right-0 lg:right-[10%] relative md:absolute lg:max-w-[475px] md:top-0 h-full mt-24 md:mt-0">
-            <img 
-                className="object-contain w-full h-full"
-                src="./hero.svg"
-            />
+          {/* Call to Action Buttons */}
+          <div className="mt-5 flex flex-wrap gap-4">
+            <Button title="Discover More" color="blue" href="about" />
+            <Button title="Our Story" color="transparent" href="about" />
+          </div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

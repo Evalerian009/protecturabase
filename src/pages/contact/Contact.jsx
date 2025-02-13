@@ -1,40 +1,70 @@
-import {styles} from '../../constants/styles'
-import Title from '../../components/Title'
-import Faqs from '../../components/Faqs'
-import { services } from './constants/constants'
-import Form from './components/Form'
+import Header from "../../components/Header";
+import { IoIosHome, IoIosPhonePortrait, IoMdGlobe } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import MapPlaceholder from "./assets/map.png";
+import Heading from "../../components/Heading";
+import { styles } from "../../constants/styles";
+import ContactForm from './components/ContactForm'; // Import the new component
 
 const Contact = () => {
   return (
-    <div className={`${styles.padX} ${styles.padY}`}>
-        <Title lgheader='Talk to our support team' smHeader={'Contact us'} txt={'Contact us to recover the password or seed phrase to your locked crypto wallet. Our friendly team would love to hear from you.'} />
+    <div>
+      <Header title="Contact" />
 
-        <div className='flex flex-col lg:flex-row gap-x-14 gap-y-28 items-start mt-24'>
-          <ul className='gap-10 flex flex-col lg:w-1/2'>
-            {services.map(item => {
-              const Icon = item.icon
-              return(
-                <li className='flex gap-7 items-center' key={item.id}>
-                  <span className="text-blue text-[1.5rem] bg-indigo-100 min-w-[70px] h-[70px] rounded-full grid place-content-center relative">
-                      <span className="absolute w-[50px] h-[50px] bg-indigo-300 rounded-full top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]" />
-                      <Icon className="relative" />
-                  </span>
-                  <div>
-                    <h3 className='text-lg text-gray-700 font-semibold'>{item.txtLg}</h3>
-                    <h3 className='mt-1 text-gray-600'>{item.txtSm}</h3>
-                  </div>
-                </li>
-              )
-            })}
-          </ul>
+      <div className={`${styles.padX} ${styles.padY}`}>
+        <Heading
+          title="Get In Touch"
+          txt="In today's digital age, reaching out to organizations has never been easier. We've made it simple for our clients to contact us—we're available 24/7. For emergencies or instant responses, please use the live chat support, where our agents will assist you immediately."
+        />
 
-          <Form />
+        <div className="mt-[70px] flex flex-col md:flex-row justify-between gap-y-7">
+          {/* Contact Details Section */}
+          <div className="md:w-[45%]">
+            <h3 className="text-4xl font-semibold text-heading">Contact Details</h3>
+            <p className="mt-3 text-grayTxt">
+              If you have any inquiries, feel free to reach out to us. Our team is dedicated to responding promptly and efficiently.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 text-grayTxt">
+              <p className="flex items-center gap-2">
+                <IoIosHome className="text-lg" />
+                <span>42nd Street, Ordway, Colorado.</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <IoIosPhonePortrait className="text-lg" />
+                <span>Phone: +1 801 413 7852</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <IoMdGlobe className="text-lg" />
+                <span>Text: +1 801 413 7852</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <MdEmail className="text-lg" />
+                <span>Email: officialcleedenz@gmail.com</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Form Section */}
+          <ContactForm />
         </div>
-        
-        <div className='mt-24' />
-        <Faqs />
-    </div>
-  )
-}
+      </div>
 
-export default Contact
+      {/* Map Section */}
+      <div className="w-full h-[350px] flex items-center justify-center">
+        <iframe
+          style={{
+            backgroundImage: `url(${MapPlaceholder})`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          className="w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282225.79979123!2d73.7250245393691!3d20.750301298393563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1587818542745!5m2!1sen!2sin"
+          frameBorder={0}
+          tabIndex={0}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

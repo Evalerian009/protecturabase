@@ -1,37 +1,35 @@
+import { Link } from "react-router-dom"
+import { footerLinks } from "../constants/constants"
 import { styles } from "../constants/styles"
 
 const Footer = () => {
   return (
-    <div className={`${styles.padX} ${styles.padY} bg-blue text-white`}>
-        <div className="flex flex-col md:flex-row justify-between md:items-center gap-y-7">
-            <div>
-                <div className="flex items-center gap-x-3">
-                    <a href='/'>Logo</a>
-                    <div className="relative">
-                        <img src="./cloudflare.png" alt="" className="w-[55px]" />
-                        <p className="text-[0.4rem] -right-[105%] absolute w-full uppercase font-semibold top-[50%] -translate-y-[50%]">Protected by cloudflare.</p>
-                    </div>
-                </div>
-
-                {/* <ul className="flex gap-4 font-semibold mt-5">
-                    <li className="hover:text-indigo-200 duration-200"><a href='#'>Pricing</a></li>
-                    <li className="hover:text-indigo-200 duration-200"><a href='#'>Testimonials</a></li>
-                </ul> */}
-            </div>
-
-            <div>
-                <form action="" className="flex">
-                    <label className="border block bg-white w-[200px] lg:w-[240px] py-1.5 rounded-l-lg h-fit">
-                        <input type="text" className="bg-transparent placeholder:text-gray-400 indent-2 w-full outline-0 text-gray-800" placeholder="Enter your email" />
-                    </label>
-                    <button className="border h-fit py-1.5 px-3 rounded-r-lg font-semibold hover:bg-indigo-500 cursor-pointer duration-200">Subscribe</button>
-                </form>
-                <p className="mt-2 ml-1 text-xs">We care about your data in our privacy policy.</p>
-            </div>
+    <>    
+      <div className={`${styles.padX} ${styles.padY} bg-bgTet text-[14px] flex flex-wrap gap-y-14 md:gap-x-8 lg:gap-x-4`}>
+        <div className="w-full md:w-[42%] lg:w-[30%]">
+          <h4 className="text-lg font-semibold uppercase text-white">About</h4>
+          <p className="mt-3 font-[200] text-gray-200">Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
         </div>
 
-        <p className="text-indigo-200 text-xs mt-12">© 2025 CryptoAssetRecovery.com, LLC. All rights reserved.</p>
-    </div>
+        {footerLinks.map((item,idx) => ((
+          <div key={item.title} className={`w-full ${idx === 0 || idx === 2 ? 'md:ml-auto lg:ml-0' : ''}  md:w-[42%] lg:w-[20%]`}>
+            <h5 className="text-lg font-semibold uppercase text-white">{item.title}</h5>
+            <ul className="mt-3 flex flex-col gap-2">
+              {item.links.map(link => (
+                <li key={link.title}>
+                  <Link 
+                    to={`${link.link}`} 
+                    className="block text-stone-200 hover:text-white font-light" 
+                    onClick={()=>window.scrollTo(0, 0)}
+                    >{link.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )))}
+      </div>
+      <div className="uppercase font-[200] bg-bgTet border-t border-border text-center text-[ghostwhite] text-[14px] p-4">&copy; Copyright 2020. All rights reserved.</div>
+    </>
   )
 }
 

@@ -1,37 +1,31 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import App from './App.jsx';
-import Home from './pages/home/Home.jsx';
-import Pricing from './pages/pricing/Pricing.jsx';
-import Testimonials from './pages/testimonials/Testimonials.jsx';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
-import Contact from './pages/contact/Contact.jsx';
+import Home from "./pages/home/Home.jsx";
+import About from "./pages/about/About.jsx";
+import Services from "./pages/services/Services.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+import Layout from "./components/Layout.jsx"; // ✅ Import new Layout component
+import ThankYou from "./pages/ThankYou.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: (
-      <div className='font-montserrat overflow-x-clip font-medium text-gray-600'>
-        <Navbar />
-        <App />
-        <Footer />
-      </div>
-    ),
+    path: "/",
+    element: <Layout />, // ✅ Layout handles Navbar, Footer, and transitions
     children: [
-      { path: '', element: <Home /> },
-      { path: 'pricing', element: <Pricing /> },
-      { path: 'testimonials', element: <Testimonials /> },
-      { path: 'contact', element: <Contact /> },
+      { path: "", element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "services", element: <Services /> },
+      { path: "contact", element: <Contact /> },
+      { path: "thank-you", element: <ThankYou /> },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>

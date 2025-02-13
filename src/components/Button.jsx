@@ -1,49 +1,33 @@
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Button = ({ color, title, custStyles, href = '/', isMobile, setIsActive }) => {
-  const className = [
-    'border',
-    'px-8',
-    'border-gray-300',
-    'font-semibold',
-    'py-2.5',
-    'rounded-lg',
-    'duration-300',
-  ];
+const Button = ({ href, title, color, custStyles }) => {
+  const location = useLocation(); // Get current route
 
-  switch (color) {
-    case 'gray':
-      className.push('bg-gray-50', 'hover:bg-gray-200');
-      break;
-    case 'blue':
-      className.push('bg-blue', 'hover:bg-indigo-800', 'text-white');
-      break;
-    default:
-      break;
-  }
+  const handleClick = (e) => {
+    if (location.pathname === href) {
+      e.preventDefault(); // Prevent duplicate navigation
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
-    <Link 
-      to={href.startsWith('/') ? href : `/${href}`} // ✅ Ensure absolute path
-      className={`${custStyles} ${className.join(' ')}`} 
-      onClick={() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-        if (isMobile) setIsActive(false); // Close mobile menu if open
-      }}
+    <Link
+      to={href.startsWith("/") ? href : `/${href}`} // Ensure absolute path
+      className={`${color === "blue" ? "bg-button1 hover:bg-bgTet text-white" : "bg-bgTet hover:bg-button1"} 
+      uppercase h-fit py-2.5 duration-200 px-10 rounded-lg text-[15px] ${custStyles}`}
+      onClick={handleClick}
     >
       {title}
     </Link>
   );
-}
-
-export default Button;
+};
 
 Button.propTypes = {
-  color: PropTypes.string,
+  href: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  href: PropTypes.string,
+  color: PropTypes.string,
   custStyles: PropTypes.string,
-  isMobile: PropTypes.bool,
-  setIsActive: PropTypes.func,
 };
+
+export default Button;
