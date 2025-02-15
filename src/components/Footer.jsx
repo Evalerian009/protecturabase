@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={`${styles.padX} ${styles.padY} bg-bgTet text-[14px] flex flex-wrap gap-y-14 md:gap-x-8 lg:gap-x-4`}>
         <div className="w-full md:w-[42%] lg:w-[30%]">
           <h4 className="text-lg font-semibold uppercase text-white">About</h4>
-          <p className="mt-3 font-[200] text-gray-200">Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
+          <p className="mt-3 font-[200] text-gray-200">At Protecturabase, we specialize in advanced cybersecurity, penetration testing, and digital forensics. Our expertise lies in identifying vulnerabilities, executing security assessments, and tackling digital challenges where others fall short.</p>
         </div>
 
         {footerLinks.map((item,idx) => ((
