@@ -27,7 +27,7 @@ const GoogleTranslate = () => {
     }, []);
 
   return (
-    <div className='fixed z-[999999] bottom-[90px] right-[20px] md:right-[10px] bg-[#28292953] hover:bg-[#282929]   p-2 text-white  flex flex-col items-center'>
+    <div className='fixed z-[999999] bottom-[50px] left-[20px] md:left-[10px] bg-[#28292953] hover:bg-[#282929]   p-2 text-white  flex flex-col items-center'>
       <button className='w-[40px] h-[40px] md:w-[45px] md:h-[45px]' onClick={handler}>
         <img src='./google-translate-logo.png' alt='google-translate' className='w-full h-full' />
       </button>
