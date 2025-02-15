@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Layout = () => {
   const [fade, setFade] = useState("opacity-100");
@@ -35,7 +36,8 @@ const Layout = () => {
       <div className={`transition-opacity duration-500 ${fade} h min-h-svh`}>
         <Outlet />
       </div>
-
+      
+      <GoogleTranslate />
       <Footer />
     </div>
   );
