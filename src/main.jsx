@@ -9,7 +9,6 @@ import About from "./pages/about/About.jsx";
 import Services from "./pages/services/Services.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Layout from "./components/Layout.jsx"; // ✅ Import new Layout component
-import ThankYou from "./pages/ThankYou.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +19,6 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
-      { path: "thank-you", element: <ThankYou /> },
     ],
   },
 ]);

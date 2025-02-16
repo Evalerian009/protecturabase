@@ -35,7 +35,7 @@ const Contact = () => {
               </p>
               <p className="flex items-center gap-2">
                 <IoMdGlobe className="text-lg" />
-                <span>Text: +1 801 413 7852</span>
+                <span>Text: +1 956 320 6632</span>
               </p>
               <p className="flex items-center gap-2">
                 <MdEmail className="text-lg" />
