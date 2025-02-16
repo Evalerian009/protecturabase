@@ -9,16 +9,24 @@ export default defineConfig(({ command, mode }) => {
   ]
 
   if (command === 'serve') {
-    // Dev specific config
     return {
       plugins,
-      // Add dev specific options here
+      server: {
+        port: 5173, // Optional: Customize dev server port
+      },
     }
   } else {
-    // Build specific config
     return {
       plugins,
-      // Add build specific options here
+      base: './', // Important for Namecheap hosting
+      build: {
+        outDir: 'dist',
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          },
+        },
+      },
     }
   }
 })
